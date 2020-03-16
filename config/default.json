@@ -1,0 +1,5 @@
+{
+  "jwtSecret": "secret",
+  "mongoUri": "mongodb+srv://serj:mPmGrJjceirBczDg@cluster0-xuuct.mongodb.net/paymentSystem?retryWrites=true&w=majority"
+}
+

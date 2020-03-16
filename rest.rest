@@ -1,0 +1,46 @@
+
+GET http://localhost:3000/products
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+
+{
+  "name": "Something awesome",
+  "price": "3.33"
+}
+
+###
+GET http://localhost:3000/products/5e4044bf7fd8d6335415aa0c
+
+###
+PATCH http://localhost:3000/products/5e4044bf7fd8d6335415aa0c
+Content-Type: application/json
+
+[
+  { "propName": "price", "value": "10.00" },
+  { "propName": "name", "value": "Some thing more awesome" }
+]
+
+###
+DELETE http://localhost:3000/products/5e417117ae40f83350971124
+
+
+###
+GET http://localhost:3000/orders
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "productId": "5e416e1ccc84002fac71b20c"
+}
+###
+
+GET http://localhost:3000/orders/5e417a94aa40a33d4c7b6fae
+###
+DELETE http://localhost:3000/orders/5e418156addbdb3b4816ac1b
+
+###
+GET http://localhost:3000/

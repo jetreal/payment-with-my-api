@@ -1,0 +1,35 @@
+/* 
+
+
+.fade-appear {
+  z-index: 1;
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: all 10s cubic-bezier(.08,.79,.16,.96);
+}
+
+.fade-enter {
+  z-index: 1;
+  opacity: 0;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all 10s ease;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.fade-exit.fade-exit-active{
+  opacity: 1;
+  transition: all 10s ease;
+  transform: translate(0, 1000px);
+}
+.fade-exit-done {
+  opacity: 0;
+  transform: translate(0, 1000px);
+} */
