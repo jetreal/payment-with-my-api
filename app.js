@@ -29,7 +29,7 @@ mongoose.Promise = global.Promise;
 app.set('view engine', 'html');
 app.use(morgan('dev'));
 app.use('/uploads', express.static('uploads'));
-app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 app.use('/user', userRoutes)
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static( 'client/build' ))
+  app.use(express.static(path.join(__dirname, 'client/build')));
 }
 
 app.get('/', function(req, res) {
