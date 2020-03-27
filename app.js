@@ -50,9 +50,9 @@ app.use((req, res, next) => {
 
 app.use('/user', userRoutes)
 
-app.get('/', function(req, res) {
-  res.render('index')
-})
+// app.get('/', function(req, res) {
+//   res.render('index')
+// })
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static( 'client/build' ))
