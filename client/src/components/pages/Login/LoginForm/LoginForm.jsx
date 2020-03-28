@@ -55,10 +55,9 @@ let LoginForm = props => {
 
 const WrapLoginForm = reduxForm({
   form: "login",
-  initialValues: {
-    email: "jet6@gmail.com",
-    password: 'jet'
-  }
+  // initialValues: {
+
+  // }
 })(LoginForm);
 
 export default WrapLoginForm;
