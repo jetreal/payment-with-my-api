@@ -56,6 +56,7 @@ export function onSubmitRegister(servResponce) {
   }
 }
 export function onSubmitError(errorData) {
+  console.log(errorData)
   return {
     type: ON_REGISTER_ERROR,
     errorData

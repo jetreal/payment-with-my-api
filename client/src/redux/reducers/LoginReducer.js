@@ -56,9 +56,9 @@ const LoginReducer = (state = initialState, action) => {
       return stateCopy
     }
     case (action.type === SUBMIT_REGISTER): {
-
+      console.log(action)
       let stateCopy = { ...state }
-      stateCopy.warningText = action.servResponce
+      stateCopy.warningText = typeof action.servResponce !== 'object' ? action.servResponce : action.servResponce.message
 
       if (action.servResponce.status && action.servResponce.status === 201) {
         stateCopy.warningText = action.servResponce.statusText
@@ -80,6 +80,7 @@ const LoginReducer = (state = initialState, action) => {
       return stateCopy
     }
     case (action.type === ON_REGISTER_ERROR): {
+
       let stateCopy = { ...state }
       stateCopy.warningText = action.errorData
       return stateCopy
