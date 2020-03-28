@@ -3,7 +3,9 @@ import qs from 'qs';
 
 export const instance = axios.create({
   // withCredentials: true,
-  baseURL: "http://localhost:5000",
+  baseURL: process.env.NODE_ENV === 'production' ? 
+  "https://evening-forest-74168.herokuapp.com" : 
+  "http://localhost:5000",
   headers: { 'content-type': 'application/x-www-form-urlencoded' },
 });
 
